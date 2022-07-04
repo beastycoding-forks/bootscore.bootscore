@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------
+RTL Pagination
+--------------------------------------------------------------*/
+
+// Pagination
+.page-item:last-child .page-link {
+    border-top-left-radius: var(--bs-pagination-border-radius);
+  border-bottom-left-radius: var(--bs-pagination-border-radius);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.page-item:first-child .page-link {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+    border-top-right-radius: var(--bs-pagination-border-radius);
+  border-bottom-right-radius: var(--bs-pagination-border-radius);
+}
+
+.page-item:not(:first-child) .page-link {
+  margin-left: 0;
+  margin-right: -1px;
+}
