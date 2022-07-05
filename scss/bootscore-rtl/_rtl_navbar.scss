@@ -2,8 +2,18 @@
 RTL Navbar
 --------------------------------------------------------------*/
 
+
+.nav,
+.navbar-nav {
+  padding-right: 0;
+}
+
 // Navbar brand
 .navbar-brand {
   margin-right: 0;
   margin-left: var(--bs-navbar-brand-margin-end);
+}
+
+#nav-main .menu-item:last-child .nav-link {
+  padding-right: var(--bs-navbar-nav-link-padding-x);
 }

@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+RTL Archive
+--------------------------------------------------------------*/
+
+// Horizontal card images
+
+// category.php, archive.php, author.php and search results
+@include media-breakpoint-up(lg) {
+  .card-img-left-md img {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+
+// Sticky post in index.php
+@include media-breakpoint-up(md) {
+  .card-img-left img {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}

@@ -9,6 +9,11 @@ RTL Utilities
   margin-right: 0.25rem !important;
 }
 
+.me-2 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
 @include media-breakpoint-up(md) {
   .ms-md-2 {
     margin-left: 0 !important;
@@ -19,4 +24,15 @@ RTL Utilities
 // List
 .list-unstyled {
   padding-right: 0;
+}
+
+
+// Paddings
+.pe-3 {
+  padding-right: 0 !important;
+  padding-left: 1rem !important;
+}
+
+.text-end {
+  text-align: left !important;
 }

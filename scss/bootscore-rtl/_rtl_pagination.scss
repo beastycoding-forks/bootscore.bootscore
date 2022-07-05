@@ -2,9 +2,13 @@
 RTL Pagination
 --------------------------------------------------------------*/
 
-// Pagination
+
+.pagination {
+  padding-right: 0;
+}
+
 .page-item:last-child .page-link {
-    border-top-left-radius: var(--bs-pagination-border-radius);
+  border-top-left-radius: var(--bs-pagination-border-radius);
   border-bottom-left-radius: var(--bs-pagination-border-radius);
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;

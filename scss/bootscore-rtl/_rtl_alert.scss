@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+RTL Alert
+--------------------------------------------------------------*/
+
+
+// Close Button
+.alert-dismissible .btn-close {
+  right: auto;
+  left: 0;
+}
+
+
+// Padding
+
+/*
+.alert {
+  padding-left: 1rem;
+}
+*/
+.alert .alert-dismissible {
+  padding-right: 1rem;
+  padding-left: 3rem;
+}
+
+
+// Hide Icons
+.alert::before,
+.must-log-in::before,
+.wc-stripe-error::before {
+  content: none;
+}

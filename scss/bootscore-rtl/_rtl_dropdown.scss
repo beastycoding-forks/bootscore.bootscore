@@ -1,0 +1,13 @@
+/*--------------------------------------------------------------
+RTL Dropdown
+--------------------------------------------------------------*/
+
+
+.dropdown-toggle::after {
+  margin-left: 0;
+  margin-right: 0.255em;
+}
+
+.dropdown-menu {
+  text-align: right;
+}
