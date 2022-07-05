@@ -2,6 +2,14 @@
  * bootScore RTL styles 5.2.0.0 (https://bootscore.me/)
  */
 
+/*
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+*/
+
 @import "bootscore-rtl/rtl_body";
 @import "bootscore-rtl/rtl_accordion";
 @import "bootscore-rtl/rtl_alert";
