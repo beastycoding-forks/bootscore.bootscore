@@ -3,25 +3,38 @@ RTL Pagination
 --------------------------------------------------------------*/
 
 
+// Reset ul
 .pagination {
   padding-right: 0;
 }
 
-.page-item:last-child .page-link {
-  border-top-left-radius: var(--bs-pagination-border-radius);
-  border-bottom-left-radius: var(--bs-pagination-border-radius);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
+// Pagination
+.page-item {
+  &:not(:first-child) .page-link {
+    margin-left: 0;
+    margin-right: -1px;
+  }
 
-.page-item:first-child .page-link {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-    border-top-right-radius: var(--bs-pagination-border-radius);
-  border-bottom-right-radius: var(--bs-pagination-border-radius);
-}
+  @if $pagination-margin-start == (calc($pagination-border-width * -1)) {
+    &:last-child {
+      .page-link {
+        @include border-start-radius(var(--#{$prefix}pagination-border-radius));
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
 
-.page-item:not(:first-child) .page-link {
-  margin-left: 0;
-  margin-right: -1px;
+    &:first-child {
+      .page-link {
+        @include border-end-radius(var(--#{$prefix}pagination-border-radius));
+              border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  } @else {
+    // Add border-radius to all pageLinks in case they have right margin
+    .page-link {
+      @include border-radius(var(--#{$prefix}pagination-border-radius));
+    }
+  }
 }
