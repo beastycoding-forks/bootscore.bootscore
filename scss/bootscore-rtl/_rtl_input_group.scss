@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+RTL Input Group
+--------------------------------------------------------------*/
+
+
+// Rounded corners
+//
+// These rulesets must come after the sizing ones to properly override sm and lg
+// border-radius values when extending. They're more specific than we'd like
+// with the `.input-group >` part, but without it, we cannot override the sizing.
+
+// stylelint-disable-next-line no-duplicate-selectors
+.input-group {
+  &:not(.has-validation) {
+    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+    > .dropdown-toggle:nth-last-child(n + 3) {
+      @include border-end-radius;
+      @include border-start-radius(0);
+    }
+  }
+
+  &.has-validation {
+    > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu),
+    > .dropdown-toggle:nth-last-child(n + 4) {
+      @include border-end-radius(0);
+    }
+  }
+
+  $validation-messages: "";
+  @each $state in map-keys($form-validation-states) {
+    $validation-messages: $validation-messages + ":not(." + unquote($state) + "-tooltip)" + ":not(." + unquote($state) + "-feedback)";
+  }
+
+  > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
+    margin-left: 0;
+    margin-right: -$input-border-width;
+    @include border-end-radius(0);
+    @include border-start-radius;
+  }
+}
