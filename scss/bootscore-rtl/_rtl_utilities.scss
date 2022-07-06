@@ -117,6 +117,16 @@ RTL Utilities
 }
 
 
+// Text
+
+.text-start {
+  text-align: right !important
+}
+
+.text-end {
+  text-align: left !important;
+}
+
 // SM
 
 @include media-breakpoint-up(sm) {
@@ -233,6 +243,16 @@ RTL Utilities
   .pe-sm-5 {
     padding-right: 0 !important;
     padding-left: $spacer * 3 !important;
+  }
+
+  // Text
+
+  .text-sm-start {
+    text-align: right !important
+  }
+
+  .text-sm-end {
+    text-align: left !important;
   }
 
 }
@@ -356,10 +376,20 @@ RTL Utilities
     padding-left: $spacer * 3 !important;
   }
 
+  // Text
+
+  .text-md-start {
+    text-align: right !important
+  }
+
+  .text-md-end {
+    text-align: left !important;
+  }
+
 }
 
 
-// MD
+// LG
 
 @include media-breakpoint-up(lg) {
 
@@ -475,6 +505,16 @@ RTL Utilities
   .pe-lg-5 {
     padding-right: 0 !important;
     padding-left: $spacer * 3 !important;
+  }
+
+  // Text
+
+  .text-lg-start {
+    text-align: right !important
+  }
+
+  .text-lg-end {
+    text-align: left !important;
   }
 
 }
@@ -596,6 +636,16 @@ RTL Utilities
   .pe-xl-5 {
     padding-right: 0 !important;
     padding-left: $spacer * 3 !important;
+  }
+
+  // Text
+
+  .text-xl-start {
+    text-align: right !important
+  }
+
+  .text-xl-end {
+    text-align: left !important;
   }
 
 }
