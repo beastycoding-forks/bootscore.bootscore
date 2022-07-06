@@ -130,11 +130,11 @@ RTL Utilities
 
 // Position
 
-.start-100 {
+.start-100:not(#preloader):not(.cart-loader) {
   left: 0 !important;
 }
 
-.start-0 {
+.start-0:not(#preloader):not(.cart-loader) {
   left: 100% !important;
 }
 
