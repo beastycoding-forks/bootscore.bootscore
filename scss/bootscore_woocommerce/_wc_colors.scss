@@ -22,11 +22,6 @@ ins {
   color: var(--bscore-wc-price-sale, var(--#{$prefix}danger));
 }
 
-.woocommerce form .form-row .required,
-.woocommerce form .form-row.woocommerce-invalid label {
-  color: var(--bscore-wc-form-invalid, var(--#{$prefix}danger));
-}
-
 .woocommerce form .form-row.woocommerce-invalid .select2-container,
 .woocommerce form .form-row.woocommerce-invalid input.input-text,
 .woocommerce form .form-row.woocommerce-invalid select {

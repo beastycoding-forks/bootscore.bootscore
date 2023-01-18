@@ -4,6 +4,7 @@ WooCommerce Checkout
 
 // Reset coupon collapse
 .woocommerce form {
+
   &.checkout_coupon,
   &.login,
   &.register {
@@ -20,7 +21,8 @@ WooCommerce Checkout
 }
 
 // Override WC border-radius: 5px; in #payment card
-#add_payment_method #payment, .woocommerce-cart #payment,
+#add_payment_method #payment,
+.woocommerce-cart #payment,
 .woocommerce-checkout #payment {
   border-radius: $border-radius;
 }
@@ -53,4 +55,40 @@ WooCommerce Checkout
   margin-top: 1rem;
   margin-bottom: 0;
   float: none;
+}
+
+
+// Form validation
+.woocommerce-invalid {
+
+  .form-control,
+  .form-check-input {
+    @extend .is-invalid;
+  }
+
+}
+
+.woocommerce-validated {
+
+  .form-control,
+  .form-check-input {
+    @extend .is-valid;
+  }
+
+}
+
+.woocommerce {
+  form {
+    .form-row.woocommerce-invalid {
+      label {
+        color: var(--#{$prefix}danger);
+      }
+    }
+
+    .form-row.woocommerce-validated {
+      label {
+        color: var(--#{$prefix}success);
+      }
+    }
+  }
 }
